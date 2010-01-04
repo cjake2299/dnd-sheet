@@ -534,6 +534,16 @@ namespace Sheet
 		}
 		#endregion
 
+        #region 우선권 정보 얻기
+        public int GetInitiative()
+        {
+            int init = 0;
+            init += GetDexBonus();
+            init += GetEffectValue("INITIATIVE_BONUS");
+
+            return init;
+        }
+        #endregion
 
         private int GetEffectValue(string type)
 		{

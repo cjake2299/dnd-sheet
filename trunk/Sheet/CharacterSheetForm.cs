@@ -60,6 +60,9 @@ namespace Sheet
 			// 이동속도 출력
 			this.speedTextBox.Text = characterInfo.GetSpeed();
 
+            // 우선권 출력
+            this.initiativeTextBox.Text = string.Format("{0:+0;-0}", characterInfo.GetInitiative());
+
 			// 캐릭터 레벨 정보 출력
             this.LevelTextBox.Text = characterInfo.GetLevelInfoStr();
 
