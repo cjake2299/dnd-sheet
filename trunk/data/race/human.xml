@@ -1,0 +1,14 @@
+<Race code="HUMAN">
+  <Name>
+    <Korean>
+      인간
+    </Korean>
+  </Name>
+  <Description>
+    <Korean>
+      인간임-_-;
+    </Korean>
+  </Description>
+  <Size>Medium</Size>
+  <LandSpeed>30</LandSpeed>
+</Race>

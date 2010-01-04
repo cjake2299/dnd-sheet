@@ -1,0 +1,30 @@
+<Item code="ADAMANTINE_BREASTPLATE_E5">
+  <Name>
+    <Korean> +5 아다만틴 브레스트플레이트 </Korean>
+  </Name>
+  <Description>
+    <Korean>
+      +5 아다만틴 브레스트플레이트
+    </Korean>
+  </Description>
+  <Weight> 1.0 </Weight>
+  <CurrentHP> 10 </CurrentHP>
+  <MaxHP> 10 </MaxHP>
+  <HardNess> 5 </HardNess>
+  <EquipPart>BODY</EquipPart>
+  <Cost>15</Cost>
+  <Effects>
+    <EffectSet>
+      <Effect>
+        <Type>AC_BONUS</Type>
+        <ModifierType>ARMOR_BASE</ModifierType>
+        <Value>5</Value>
+      </Effect>
+      <Effect>
+        <Type>AC_BONUS</Type>
+        <ModifierType>ENHANCEMENT</ModifierType>
+        <Value>5</Value>
+      </Effect>
+    </EffectSet>
+  </Effects>
+</Item>

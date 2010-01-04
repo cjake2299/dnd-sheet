@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="euc-kr" standalone="yes"?>
+<CharacterSheet>
+  <PlayerName>남조</PlayerName>
+  <TeamName>피망</TeamName>
+  <CharacterName>테스트</CharacterName>
+  <Race>HUMAN</Race>
+  <Alignment>Lawful Good</Alignment>
+  <Age>20</Age>
+  <Height>180</Height>
+  <Weight>80</Weight>
+  <Description>테스트용 캐릭터 시트입니다.</Description>
+  <Memo>테스트중.</Memo>
+  <LevelInfo>
+    <Level number="1">
+      <ClassCode>FIGHTER</ClassCode>
+      <HP>10</HP>
+    </Level>
+    <Level number="2">
+      <ClassCode>FIGHTER</ClassCode>
+      <HP>6</HP>
+    </Level>
+    <Level number="3">
+      <ClassCode>WIZARD</ClassCode>
+      <HP>3</HP>
+    </Level>
+    <Level number="4">
+      <ClassCode>FIGHTER</ClassCode>
+      <HP>6</HP>
+    </Level>
+    <Level number="5">
+      <ClassCode>WIZARD</ClassCode>
+      <HP>3</HP>
+    </Level>
+    <Level number="6">
+      <ClassCode>FIGHTER</ClassCode>
+      <HP>6</HP>
+    </Level>
+    <Level number="7">
+      <ClassCode>FIGHTER</ClassCode>
+      <HP>6</HP>
+    </Level>
+  </LevelInfo>
+  <HP>
+    <CurrentHP>34</CurrentHP>
+  </HP>
+  <Ability>
+    <Strength>16</Strength>
+    <Dexterity>9</Dexterity>
+    <Constitution>14</Constitution>
+    <Intelligence>11</Intelligence>
+    <Wisdom>13</Wisdom>
+    <Charisma>12</Charisma>
+  </Ability>
+  <Feats>
+    <Feat code="WEAPON_FOCUS" />
+  </Feats>
+  <Skills>
+    <Skill code="RIDE">2</Skill>
+    <Skill code="HEAL">6</Skill>
+  </Skills>
+  <Equipments>
+    <Item code="LONGSWORD_E1" />
+    <Item code="BELT_OF_GAINT_STRENGTH_E4" />
+  </Equipments>
+  <Inventory>
+    <Item code="LONGSWORD_E1" />
+  </Inventory>
+  <Gold>123.4</Gold>
+</CharacterSheet>

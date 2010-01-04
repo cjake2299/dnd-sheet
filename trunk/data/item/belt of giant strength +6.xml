@@ -1,0 +1,25 @@
+<Item code="BELT_OF_GAINT_STRENGTH_E6">
+  <Name>
+    <Korean> 거인힘의 허리띠 +6 </Korean>
+  </Name>
+  <Description>
+    <Korean>
+      힘에 +6해줌
+    </Korean>
+  </Description>
+  <Weight> 1.0 </Weight>
+  <CurrentHP> 10 </CurrentHP>
+  <MaxHP> 10 </MaxHP>
+  <HardNess> 5 </HardNess>
+  <EquipPart>Waist</EquipPart>
+  <Cost>15</Cost>
+  <Effects>
+    <EffectSet>
+      <Effect>
+        <Type>STR_BONUS</Type>
+        <ModifierType>ENHANCEMENT</ModifierType>
+        <Value>6</Value>
+      </Effect>
+    </EffectSet>
+  </Effects>
+</Item>

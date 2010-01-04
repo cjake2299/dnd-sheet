@@ -1,0 +1,36 @@
+<Feat code="GREATER_WEAPON_FOCUS">
+  <Name>
+    <Korean> 훌륭한 무기 중점화 </Korean>
+  </Name>
+  <Description>
+    <Korean>
+      당신은 그레이트 액스(Greataxe)같이 종류별로 무기 전문화(Weapon
+      Focus)를 해둔 것을 선택할 수 있다.
+      당신은 비무장 타격(Unarmed Strike)나 꽉 잡기(Grapple)도 이 기예로 적
+      용시킬 수 있다.
+      당신은 각별히 그 무기를 다루는데 능숙하다.
+      필요조건: 무기 숙련(proficiency with Weapon), 선택한 무기의 무기 전
+      문화(Weapon Focus), 파이터 8레벨
+      이득: 선택한 무기를 사용할 때 명중 굴림에 +1을 획득한다.
+      이 보너스는 무기 전문화를 비롯한 다른 명중 굴림 보너스와 중첩된다.
+      특별: 당신은 이 기예를 여러번 획득할 수 있지만, 그 효과가 중첩되지 않
+      으며, 얻을 때 마다 다른 종류의 무기 종류를 선택해주어야 한다.
+      파이터는 훌륭한 무기 연구 기예를 얻기 위해서는 그 무기에 대한 훌륭한
+      무기 전문화를 가지고 있어야 한다.
+      파이터는 자신들의 보너스 피트 중 하나로 훌륭한 무기 전문화를 선택할 수
+      있을 것이다.
+      
+      * 무기별 보너스 적용 미구현.
+      * 두 개 이상의 무기 착용 미구현.
+    </Korean>
+  </Description>
+  <Effects>
+    <EffectSet>
+      <Effect>
+        <Type>WEAPON_ATTACK_BONUS</Type>
+        <ModifierType>FEAT</ModifierType>
+        <Value>2</Value>
+      </Effect>
+    </EffectSet>
+  </Effects>
+</Feat>

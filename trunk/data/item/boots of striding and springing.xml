@@ -1,0 +1,25 @@
+<Item code="BOOTS_OF_STRIDING_AND_SPRINGING">
+  <Name>
+    <Korean> 부츠 오브 스트라이딩 앤 스프링 </Korean>
+  </Name>
+  <Description>
+    <Korean>
+      점프에 +5해줌
+    </Korean>
+  </Description>
+  <Weight> 1.0 </Weight>
+  <CurrentHP> 10 </CurrentHP>
+  <MaxHP> 10 </MaxHP>
+  <HardNess> 5 </HardNess>
+  <EquipPart>BOOT</EquipPart>
+  <Cost>15</Cost>
+  <Effects>
+    <EffectSet>
+      <Effect>
+        <Type>JUMP_SKILL_BONUS</Type>
+        <ModifierType>ENHANCEMENT</ModifierType>
+        <Value>5</Value>
+      </Effect>
+    </EffectSet>
+  </Effects>
+</Item>

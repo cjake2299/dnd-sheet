@@ -1,0 +1,31 @@
+<Feat code="WEAPON_FOCUS">
+  <Name>
+    <Korean> 무기 전문화 </Korean>
+  </Name>
+  <Description>
+    <Korean>
+      그레이트액스 같이 무기의 종류를 결정한다.
+      당신은 비무장 타격이나 잡기(Grapple)도(광선도 가능... 주문시전자라면)
+      무기의 일종으로 취급 가능하다.
+      당신은 특별히 이 무기들에 능숙하다.(만약 당신이 광선을 선택했다면, 광
+      선 계열에 능숙해지는데 얼어붙는 광선(ray of frost)같은 것이 그 예다)
+      필요조건: 그 무기의 숙련(Proficiency), 기본 공격 보너스 +1
+      이득: 선택한 무기계열에 대해 명중 굴림 보너스 +1
+      특별: 당신은 이 기예를 여러번 얻을 수 있지만 효과가 중첩되지는 않는다.
+      매번 이 기예를 취할 때 다른 종류의 무기를 선택해야 한다.
+      파이터는 아마 그들의 추가 기예로 무기 전문화를 선택할 수 있다.
+      
+      * 무기별 보너스 적용 미구현.
+      * 두 개 이상의 무기 착용 미구현.
+    </Korean>
+  </Description>
+  <Effects>
+    <EffectSet>
+      <Effect>
+        <Type>WEAPON_ATTACK_BONUS</Type>
+        <ModifierType>FEAT</ModifierType>
+        <Value>1</Value>
+      </Effect>
+    </EffectSet>
+  </Effects>
+</Feat>

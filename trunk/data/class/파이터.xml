@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Class code="FIGHTER">
+	<Name>
+		<English> Fighter </English>
+		<Korean> 파이터 </Korean>
+	</Name>
+	<BAB> Good </BAB>
+  <Save>
+    <Fort>Good</Fort>
+    <Ref>Poor</Ref>
+    <Will>Poor</Will>
+  </Save>
+  <SkillPoint>2</SkillPoint>
+</Class>

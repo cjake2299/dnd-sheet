@@ -1,0 +1,35 @@
+<Feat code="IMPROVED_CRITICAL">
+  <Name>
+    <Korean> 향상된 치명타 </Korean>
+  </Name>
+  <Description>
+    <Korean>
+      롱소드나 그레이트액스 같이 무기의 종류를 선택하여 그 무기로 어떻게 고통스
+      럽게 명중시킬 수 있는지 알았다.
+      필요조건: 무기 숙련, 기본 공격 보너스 +8
+      이득: 당신이 선택한 무기 종류를 사용하고 있을 때, 가능성 범위가 2배로
+      증가한다.
+      예를 들어, 일반적으로 롱소드는 치명적 명중의 가능성은 19-20을 굴려야한
+      다.(숫자 2개)
+      만약 이 향상된 치명타를 가지고 롱소드로 공격한다면 가능성 범위는 17-20
+      이 될 것이다.(숫자 4개)
+      특별: 당신은 향상된 치명타를 여러번 얻을 수 있지만 그는 중첩되지 않고,
+      취할 때 마다 다른 종류의 무기 종류를 적용시켜야 한다.
+      이 효과는 무기의 다른 위협 범위를 높여주는 효과와 중첩되지 않는다.(예
+      리함(keen edge) 주문 같이)
+      파이터는 자신들의 보너스 피트 중 하나로 향상된 치명타를 선택할 수 있을
+      것이다.
+      
+      * 효과 미구현
+    </Korean>
+  </Description>
+  <Effects>
+    <EffectSet>
+      <Effect>
+        <Type>MULTIPLY_WEAPON_CRITICAL_RANGE</Type>
+        <ModifierType>FEAT</ModifierType>
+        <Value>2</Value>
+      </Effect>
+    </EffectSet>
+  </Effects>
+</Feat>

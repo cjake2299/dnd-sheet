@@ -1,0 +1,25 @@
+<Item code="AMULET_OF_HEALTH_E4">
+  <Name>
+    <Korean> 건강의 목걸이 +4 </Korean>
+  </Name>
+  <Description>
+    <Korean>
+      건강에 +4해줌
+    </Korean>
+  </Description>
+  <Weight> 1.0 </Weight>
+  <CurrentHP> 10 </CurrentHP>
+  <MaxHP> 10 </MaxHP>
+  <HardNess> 5 </HardNess>
+  <EquipPart>NECK</EquipPart>
+  <Cost>15</Cost>
+  <Effects>
+    <EffectSet>
+      <Effect>
+        <Type>CON_BONUS</Type>
+        <ModifierType>ENHANCEMENT</ModifierType>
+        <Value>4</Value>
+      </Effect>
+    </EffectSet>
+  </Effects>
+</Item>

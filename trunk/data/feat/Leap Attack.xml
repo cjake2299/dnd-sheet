@@ -1,0 +1,13 @@
+<Feat code="LEAP_ATTACK">
+  <Name>
+    <Korean> 점프 공격 </Korean>
+  </Name>
+  <Description>
+    <Korean>
+      * 효과 구현 대상 아님
+    </Korean>
+  </Description>
+  <Effects>
+
+  </Effects>
+</Feat>

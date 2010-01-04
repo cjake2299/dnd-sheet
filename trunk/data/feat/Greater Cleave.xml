@@ -1,0 +1,19 @@
+<Feat code="GREATER_CLEAVE">
+  <Name>
+    <Korean> 능숙한 베어넘기기 </Korean>
+  </Name>
+  <Description>
+    <Korean>
+      당신은 근접 전투를 할 때 적을 쓰러트리고 나서 계속하여 공격할 수 있다.
+      필요조건: 힘 13, 파워 어택, 베어 넘기기, 기본 명중 보너스 +4
+      이득: 이 기예는 베어 넘기기를 사용할 때 라운드 당 제한을 두지 않는다.
+      특별: 파이터는 자신의 파이터 보너스 기예 중 하나로 능숙한 베어 넘기기
+      를 선택할 수 있다.
+      
+      * 효과 구현 대상 아님.
+    </Korean>
+  </Description>
+  <Effects>
+
+  </Effects>
+</Feat>

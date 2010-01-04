@@ -1,0 +1,25 @@
+<Item code="ADAMANTINE_GREATSWORD_E3">
+  <Name>
+    <Korean> +3 아다만틴 그레이트소드 </Korean>
+  </Name>
+  <Description>
+    <Korean>
+      +3 아다만틴 그레이트소드
+    </Korean>
+  </Description>
+  <Weight> 1.0 </Weight>
+  <CurrentHP> 10 </CurrentHP>
+  <MaxHP> 10 </MaxHP>
+  <HardNess> 5 </HardNess>
+  <EquipPart>Waist</EquipPart>
+  <Cost>15</Cost>
+  <Effects>
+    <EffectSet>
+      <Effect>
+        <Type>ATTACK_BONUS</Type>
+        <ModifierType>ENHANCEMENT</ModifierType>
+        <Value>3</Value>
+      </Effect>
+    </EffectSet>
+  </Effects>
+</Item>

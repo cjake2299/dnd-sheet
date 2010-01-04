@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Class code="WIZARD">
+	<Name>
+		<English> Wizard </English>
+		<Korean> 위저드 </Korean>
+	</Name>
+	<BAB> Bad </BAB>
+  <Save>
+    <Fort>Poor</Fort>
+    <Ref>Poor</Ref>
+    <Will>Good</Will>
+  </Save>
+  <SkillPoint>2</SkillPoint>
+</Class>

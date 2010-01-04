@@ -1,0 +1,25 @@
+<Item code="GLOVE_OF_DEXTERITY_E4">
+  <Name>
+    <Korean> 민첩의 장갑 +4 </Korean>
+  </Name>
+  <Description>
+    <Korean>
+      민첩에 +4해줌
+    </Korean>
+  </Description>
+  <Weight> 1.0 </Weight>
+  <CurrentHP> 10 </CurrentHP>
+  <MaxHP> 10 </MaxHP>
+  <HardNess> 5 </HardNess>
+  <EquipPart>Waist</EquipPart>
+  <Cost>15</Cost>
+  <Effects>
+    <EffectSet>
+      <Effect>
+        <Type>DEX_BONUS</Type>
+        <ModifierType>ENHANCEMENT</ModifierType>
+        <Value>4</Value>
+      </Effect>
+    </EffectSet>
+  </Effects>
+</Item>

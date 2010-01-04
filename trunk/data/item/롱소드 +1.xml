@@ -1,0 +1,30 @@
+<Item code="LONGSWORD_E1">
+  <Name>
+    <Korean> +1 롱소드 </Korean>
+  </Name>
+  <Description>
+    <Korean>
+      +1 마법 걸린 롱소드
+    </Korean>
+  </Description>
+  <Weight> 1.0 </Weight>
+  <CurrentHP> 10 </CurrentHP>
+  <MaxHP> 10 </MaxHP>
+  <HardNess> 5 </HardNess>
+  <EquipPart>WEAPON</EquipPart>
+  <Cost>15</Cost>
+  <Material>Steel</Material>
+  <Damage>1d8</Damage>
+  <CritialRange>2</CritialRange>
+  <CirtialMuitiplier>2</CirtialMuitiplier>
+  <DamageType>Slashing</DamageType>
+  <Effects>
+    <EffectSet>
+      <Effect>
+        <Type>ATTACK_BONUS</Type>
+        <ModifierType>ENHANCEMENT</ModifierType>
+        <Value>1</Value>
+      </Effect>
+    </EffectSet>
+  </Effects>
+</Item>

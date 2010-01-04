@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Class code="BARBARIAN">
+	<Name>
+		<English> Barbarian </English>
+		<Korean> 바바리안 </Korean>
+	</Name>
+	<BAB> Good </BAB>
+  <Save>
+    <Fort>Good</Fort>
+    <Ref>Poor</Ref>
+    <Will>Poor</Will>
+  </Save>
+  <SkillPoint>4</SkillPoint>
+</Class>

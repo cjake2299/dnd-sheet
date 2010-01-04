@@ -1,0 +1,22 @@
+<Feat code="IMPROVED_INITIATIVE">
+  <Name>
+    <Korean> 향상된 선제권 </Korean>
+  </Name>
+  <Description>
+    <Korean>
+      당신은 싸우는 중에 더 빨리 반응할 수 있다.
+      이득: 당신은 선제권 체크에 +4보너스를 받는다.
+      특별: 파이터는 자신들의 보너스 피트 중 하나로 향상된 선제권을 선택할
+      수 있을 것이다.
+    </Korean>
+  </Description>
+  <Effects>
+    <EffectSet>
+      <Effect>
+        <Type>INITIATIVE_BONUS</Type>
+        <ModifierType>FEAT</ModifierType>
+        <Value>4</Value>
+      </Effect>
+    </EffectSet>
+  </Effects>
+</Feat>
