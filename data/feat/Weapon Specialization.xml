@@ -1,0 +1,26 @@
+<Feat code="WEAPON_SPECIALIZATION">
+  <Name>
+    <Korean> 무기 연구 </Korean>
+  </Name>
+  <Description>
+    <Korean>
+      무기 전문화(Focus)가 되어 있는 그레이터액스 같은 무기 종류를 선택한다.
+      당신은 비무장 타격이나 잡기(Grapple)도 무기의 일종으로 취급 가능하다.
+      당신은 이 무기를 사용할 때 추가적인 피해를 준다.
+      필요조건: 무기의 숙련화, 무기의 전문화, 파이터 4레벨
+      이득: 선택한 종류의 모든 무기를 사용할 때 +2의 피해 추가를 가진다.
+      특별: 당신은 이 기예를 여러번 얻을 수 있지만 효과가 중첩되지는 않는다.
+      매번 이 기예를 취할 때 다른 종류의 무기를 선택해야 한다.
+      파이터는 아마 그들의 추가 기예로 무기 전문화를 선택할 수 있다.
+    </Korean>
+  </Description>
+  <Effects>
+    <EffectSet>
+      <Effect>
+        <Type>WEAPON_DAMAGE_BONUS</Type>
+        <ModifierType>FEAT</ModifierType>
+        <Value>2</Value>
+      </Effect>
+    </EffectSet>
+  </Effects>
+</Feat>

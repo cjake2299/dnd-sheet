@@ -1,0 +1,16 @@
+<Skill code="JUMP">
+  <Name>
+    <Korean>
+      도약    
+    </Korean>
+  </Name>
+  <Description>
+    <Korean>
+      이 기술을 사용해 함정을 건너뛰거나, 낮은 울타리를 뛰어넘거나, 나무의 제
+      일 낮은 가지에 올라갈 수 있습니다.
+    </Korean>
+  </Description>
+  <RelatedAbility>STR</RelatedAbility>
+  <RelatedSkillList>
+  </RelatedSkillList>
+</Skill>

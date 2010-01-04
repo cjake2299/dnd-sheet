@@ -1,0 +1,15 @@
+<Skill code="HEAL">
+  <Name>
+    <Korean>
+      치료    
+    </Korean>
+  </Name>
+  <Description>
+    <Korean>
+      치료하기
+    </Korean>
+  </Description>
+  <RelatedAbility>WIS</RelatedAbility>
+  <RelatedSkillList>
+  </RelatedSkillList>
+</Skill>

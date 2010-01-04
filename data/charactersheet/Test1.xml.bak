@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<CharacterSheet>
+	<PlayerName> 테스터 </PlayerName>
+	<TeamName> 피망 </TeamName>
+	<CharacterName> 테스트 </CharacterName>
+	<Race> HUMAN </Race>
+	<Alignment> Lawful Good </Alignment>
+	<Age> 20 </Age>
+	<Height> 180 </Height>
+	<Weight> 80 </Weight>
+	<LevelInfo>
+		<Level number="1"> 
+			<ClassCode> FIGHTER </ClassCode>
+		</Level>
+		<Level number="2"> 
+			<ClassCode> FIGHTER </ClassCode>
+		</Level>
+		<Level number="3"> 
+			<ClassCode> WIZARD </ClassCode>
+		</Level>
+		<Level number="4"> 
+			<ClassCode> FIGHTER </ClassCode>
+		</Level>
+		<Level number="5"> 
+			<ClassCode> WIZARD </ClassCode>
+		</Level>
+	</LevelInfo>
+	<HP> 35 </HP>
+	<Ability>
+		<Strength> 16 </Strength>
+		<Dexterity> 9 </Dexterity>
+		<Constitution> 14 </Constitution>
+		<Intelligence> 11 </Intelligence>
+		<Wisdom> 13 </Wisdom>
+		<Charisma> 12 </Charisma>
+	</Ability>
+	<Feats>
+		<Feat code="WEAOPN_FOCUS">
+			<SubType> LONGSWORD </SubType>
+		</feat>
+	</Feats>
+	<Skills>
+		<Skill code="SPELLCRAFT"> 2 </Skill>
+		<Skill code="RIDE"> 2 </Skill>
+		<Skill code="HESL"> 6 </Skill>
+	</Skills>
+
+</CharacterSheet>

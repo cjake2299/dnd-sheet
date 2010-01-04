@@ -1,0 +1,25 @@
+<Item code="CLOAK_OF_RESISTANCE_E4">
+  <Name>
+    <Korean> 저항의 망토 +4 </Korean>
+  </Name>
+  <Description>
+    <Korean>
+      모든 내성에 +4 해줌
+    </Korean>
+  </Description>
+  <Weight> 1.0 </Weight>
+  <CurrentHP> 10 </CurrentHP>
+  <MaxHP> 10 </MaxHP>
+  <HardNess> 5 </HardNess>
+  <EquipPart>SHOULDER</EquipPart>
+  <Cost>15</Cost>
+  <Effects>
+    <EffectSet>
+      <Effect>
+        <Type>ALL_SAVE_BONUS</Type>
+        <ModifierType>ENHANCEMENT</ModifierType>
+        <Value>4</Value>
+      </Effect>
+    </EffectSet>
+  </Effects>
+</Item>
