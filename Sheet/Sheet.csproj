@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{4290D3F0-55C2-4C17-AFA3-A79A9F3C4522}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -59,7 +59,8 @@
     <Compile Include="Character\ArmorClass.cs" />
     <Compile Include="Character\Attack.cs" />
     <Compile Include="Character\CharacterSheet.cs" />
-    <Compile Include="Character\ClassInfo.cs" />
+    <Compile Include="Character\SpecialQuilities.cs" />
+    <Compile Include="Rule\ClassInfo.cs" />
     <Compile Include="Character\Equipment.cs" />
     <Compile Include="Character\Feats.cs" />
     <Compile Include="Character\Level.cs" />
@@ -122,6 +123,12 @@
     <Compile Include="SkillListForm.Designer.cs">
       <DependentUpon>SkillListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SpecialQuilityListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpecialQuilityListForm.Designer.cs">
+      <DependentUpon>SpecialQuilityListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Util.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -182,6 +189,9 @@
     <EmbeddedResource Include="SkillListForm.resx">
       <DependentUpon>SkillListForm.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpecialQuilityListForm.resx">
+      <DependentUpon>SpecialQuilityListForm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

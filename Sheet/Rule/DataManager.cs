@@ -39,13 +39,13 @@ namespace Sheet
         // 전체 데이터 가져오기
         public void LoadAllData()
         {
-            LoadAllClassData();
-            LoadAllItemData();
-            LoadAllRaceData();
             LoadAllSkillData();
             LoadAllFeatData();
             LoadAllSpecialQuilityData();
             LoadAllSpellData();
+            LoadAllItemData();
+            LoadAllRaceData();
+            LoadAllClassData(); // 클래스 데이터를 맨 마지막에.
         }
 		// 클래스 정보 가져오기
         public void LoadAllClassData()
@@ -172,5 +172,22 @@ namespace Sheet
                 }
             }
         }
+
+        public Item GetItem(string code)
+        {
+            if (m_itemData.ContainsKey(code))
+                return m_itemData[code];
+            else
+                return Item.GetUndefinedItem("'" + code + "' : 존재하지 않는 아이템");
+        }
+/*
+        SpecialQuilityInfo GetSpecialQuility(string code)
+        {
+            if (m_specialQuilityData.ContainsKey(code))
+                return m_specialQuilityData[code];
+            else
+                return null;
+        }
+*/
     }
 }

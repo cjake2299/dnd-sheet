@@ -35,9 +35,9 @@ namespace Sheet
         #endregion
 
         public Item()
-		{
-
-		}
+        {
+            
+        }
 
 		public Item(string path)
 		{
@@ -128,7 +128,7 @@ namespace Sheet
 			XmlNodeList effectNodes = root.SelectNodes("/Item/Effects//EffectSet");
 			foreach (XmlNode effectSetNode in effectNodes)
 			{
-				m_effects.Add( new EffectSet(effectSetNode) );
+				m_effects.Add( new EffectSet(effectSetNode, "ITEM", m_code) );
 			}
 			#endregion
 		}

@@ -30,6 +30,13 @@ namespace Sheet
 			LoadEffectSet(node);
 		}
 
+        public EffectSet(XmlNode node, string sourceType, string sourceName)
+        {
+            LoadEffectSet(node);
+            m_sourceType = sourceType;
+            m_sourceName = sourceName;
+        }
+
         public void SetEffectSource(string type, string name)
         {
             m_sourceType = type;
@@ -81,5 +88,33 @@ namespace Sheet
 				m_effectList.Add(new Effect(effectNode));
 			}
 		}
+
+        // 출처의 이름을 얻는 함수
+        public string GetSourceName()
+        {
+            string name = string.Empty;
+            switch (m_sourceType)
+            {
+                case "ITEM": name = DataManager.Instance.GetItem(m_sourceName).Name; break;
+                case "SPECIALQUILITY": name = DataManager.Instance.SpecialQuilityData[m_sourceName].Name; break;
+                case "FEAT": name = DataManager.Instance.FeatData[m_sourceName].Name; break;
+                default: name = "Unknown"; break;
+            }
+
+            return name;
+        }
+
+        // 이펙트를 문자열 형태로 얻는 함수
+        public override string ToString()
+        {
+            List<string> list = new List<string>();
+
+            foreach(Effect e in m_effectList)
+            {
+                list.Add(string.Format("{0} {1:+0;-0}({2})", e.TypeCode, e.Value, e.ModifierType));
+            }
+
+            return String.Join(", ", list.ToArray());
+        }
 	}
 }

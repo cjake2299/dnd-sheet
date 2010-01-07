@@ -115,6 +115,17 @@ namespace Sheet
 				featListView.Items.Add(feat);
             }
 
+            // 특수능력 정보 출력
+            SQListView.Items.Clear();
+            foreach (SpecialQuilityInfo SQ in characterInfo.SpecialQuilities)
+            {
+                ListViewItem SQItem = new ListViewItem();
+                SQItem.Tag = SQ;
+                SQItem.Name = SQ.Code;
+                SQItem.Text = SQ.Name;
+                SQListView.Items.Add(SQItem);
+            }
+
             // 스킬정보 출력
             skillListView.Items.Clear();
             string name;
@@ -158,6 +169,9 @@ namespace Sheet
 
             // 소지금 출력
             this.goldTextBox.Text = characterInfo.Gold.ToString();
+
+            // 활성화된 이펙트 목록 출력
+            DisplayEffectList();
 
             // 수정되지 않은 상태로 설정.
             isSheetChanged = false;
@@ -362,6 +376,7 @@ namespace Sheet
 			dlg.Show();
 		}
 
+        // 리전을 피트, 스킬, 특수능력 형태로 구분해서 재정리 한번 해야함.
 		#region 컨텍스트 메뉴
 		private void viewFeatInfoToolStripMenuItem_Click(object sender, EventArgs e)
 		{
@@ -382,6 +397,46 @@ namespace Sheet
 			dlg.Owner = this;
 			dlg.Show();
 		}
+        private void viewSQInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (SQListView.SelectedItems.Count < 1)
+                return;
+
+            SpecialQuilityListForm dlg = new SpecialQuilityListForm(SQListView.SelectedItems[0].Name, characterInfo);
+            dlg.Owner = this;
+            dlg.Show();
+        }
+
+        private void activeSQToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (SQListView.SelectedItems.Count < 1)
+                return;
+
+            characterInfo.ActiveSpecialQuility((SpecialQuilityInfo)SQListView.SelectedItems[0].Tag);
+            DisplayCharacterInfo();
+        }
 		#endregion
-	}
+
+        private void SQListView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(SQListView.SelectedItems.Count < 1)
+                return;
+
+            if (((SpecialQuilityInfo)SQListView.SelectedItems[0].Tag).Type == SpecialQuilityInfo.SpecialQuilityType.active)
+                activeSQToolStripMenuItem.Enabled = true;
+            else
+                activeSQToolStripMenuItem.Enabled = false;
+        }
+
+        #region 이펙트 리스트 관련
+        public void DisplayEffectList()
+        {
+            foreach(EffectSet effectSet in characterInfo.Effects)
+            {
+                effectDataGridView.Rows.Add(effectSet.GetSourceName(), effectSet.ToString());
+            }
+            
+        }
+        #endregion 
+    }
 }

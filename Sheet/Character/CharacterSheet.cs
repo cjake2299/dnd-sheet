@@ -33,6 +33,9 @@ namespace Sheet
         // 피트
         List<string> m_feats = new List<string>(); // 피트리스트. 피트 코드만.
 
+        // 특수능력
+        List<SpecialQuilityInfo> m_specialQuilities = new List<SpecialQuilityInfo>();
+
         // 스킬
         Dictionary<string, int> m_skills = new Dictionary<string,int>(); // 스킬리스트. 스킬코드-랭크 쌍.
 
@@ -138,9 +141,11 @@ namespace Sheet
             set { m_baseCha = value; }
         }
         public List<string> Feats { get { return m_feats; } }
+        public List<SpecialQuilityInfo> SpecialQuilities { get { return m_specialQuilities; } }
         public Dictionary<string, int> Skills { get { return m_skills; } }
         public List<Item> Equipments { get { return m_equipments; } }
 		public List<Item> Inventroy { get { return m_inventroy; } }
+        public List<EffectSet> Effects { get { return m_effects; } }
         public double Gold
         {
             get { return m_gold; }

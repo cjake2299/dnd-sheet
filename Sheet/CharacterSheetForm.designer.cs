@@ -61,6 +61,8 @@
             this.FullAtkTextBox = new System.Windows.Forms.TextBox();
             this.sheetTabControl = new System.Windows.Forms.TabControl();
             this.SheetTabPage = new System.Windows.Forms.TabPage();
+            this.initiativeTextBox = new System.Windows.Forms.TextBox();
+            this.label39 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.modifyFeatButton = new System.Windows.Forms.Button();
@@ -147,8 +149,9 @@
             this.도움말ToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.openSheetFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveSheetFileDialog = new System.Windows.Forms.SaveFileDialog();
-            this.label39 = new System.Windows.Forms.Label();
-            this.initiativeTextBox = new System.Windows.Forms.TextBox();
+            this.SQContextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.viewSQInfoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.activeSQToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             sellButton = new System.Windows.Forms.Button();
             this.sheetTabControl.SuspendLayout();
             this.SheetTabPage.SuspendLayout();
@@ -159,6 +162,7 @@
             this.effectTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.effectDataGridView)).BeginInit();
             this.toolStrip1.SuspendLayout();
+            this.SQContextMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // sellButton
@@ -504,6 +508,23 @@
             this.SheetTabPage.Text = "캐릭터 시트";
             this.SheetTabPage.UseVisualStyleBackColor = true;
             // 
+            // initiativeTextBox
+            // 
+            this.initiativeTextBox.Location = new System.Drawing.Point(361, 87);
+            this.initiativeTextBox.Name = "initiativeTextBox";
+            this.initiativeTextBox.ReadOnly = true;
+            this.initiativeTextBox.Size = new System.Drawing.Size(54, 21);
+            this.initiativeTextBox.TabIndex = 77;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(333, 90);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(21, 12);
+            this.label39.TabIndex = 76;
+            this.label39.Text = "Init";
+            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(306, 571);
@@ -541,6 +562,7 @@
             this.featListView.TabIndex = 71;
             this.featListView.UseCompatibleStateImageBehavior = false;
             this.featListView.View = System.Windows.Forms.View.List;
+            this.featListView.DoubleClick += new System.EventHandler(this.viewFeatInfoToolStripMenuItem_Click);
             // 
             // featContextMenuStrip
             // 
@@ -558,11 +580,14 @@
             // 
             // SQListView
             // 
+            this.SQListView.ContextMenuStrip = this.SQContextMenuStrip;
             this.SQListView.Location = new System.Drawing.Point(117, 473);
             this.SQListView.Name = "SQListView";
             this.SQListView.Size = new System.Drawing.Size(282, 43);
             this.SQListView.TabIndex = 70;
             this.SQListView.UseCompatibleStateImageBehavior = false;
+            this.SQListView.SelectedIndexChanged += new System.EventHandler(this.SQListView_SelectedIndexChanged);
+            this.SQListView.DoubleClick += new System.EventHandler(this.viewSQInfoToolStripMenuItem_Click);
             // 
             // skillListView
             // 
@@ -573,6 +598,7 @@
             this.skillListView.TabIndex = 69;
             this.skillListView.UseCompatibleStateImageBehavior = false;
             this.skillListView.View = System.Windows.Forms.View.SmallIcon;
+            this.skillListView.DoubleClick += new System.EventHandler(this.viewSkillInfoToolStripMenuItem_Click);
             // 
             // skillContextMenuStrip
             // 
@@ -1310,22 +1336,27 @@
             // 
             this.saveSheetFileDialog.DefaultExt = "xml";
             // 
-            // label39
+            // SQContextMenuStrip
             // 
-            this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(333, 90);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(21, 12);
-            this.label39.TabIndex = 76;
-            this.label39.Text = "Init";
+            this.SQContextMenuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.viewSQInfoToolStripMenuItem,
+            this.activeSQToolStripMenuItem});
+            this.SQContextMenuStrip.Name = "SQContextMenuStrip";
+            this.SQContextMenuStrip.Size = new System.Drawing.Size(181, 48);
             // 
-            // initiativeTextBox
+            // viewSQInfoToolStripMenuItem
             // 
-            this.initiativeTextBox.Location = new System.Drawing.Point(361, 87);
-            this.initiativeTextBox.Name = "initiativeTextBox";
-            this.initiativeTextBox.ReadOnly = true;
-            this.initiativeTextBox.Size = new System.Drawing.Size(54, 21);
-            this.initiativeTextBox.TabIndex = 77;
+            this.viewSQInfoToolStripMenuItem.Name = "viewSQInfoToolStripMenuItem";
+            this.viewSQInfoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewSQInfoToolStripMenuItem.Text = "툭수능력 정보 보기";
+            this.viewSQInfoToolStripMenuItem.Click += new System.EventHandler(this.viewSQInfoToolStripMenuItem_Click);
+            // 
+            // activeSQToolStripMenuItem
+            // 
+            this.activeSQToolStripMenuItem.Name = "activeSQToolStripMenuItem";
+            this.activeSQToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.activeSQToolStripMenuItem.Text = "특수능력 활성화";
+            this.activeSQToolStripMenuItem.Click += new System.EventHandler(this.activeSQToolStripMenuItem_Click);
             // 
             // CharacterSheetForm
             // 
@@ -1349,6 +1380,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.effectDataGridView)).EndInit();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
+            this.SQContextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1474,6 +1506,9 @@
 		private System.Windows.Forms.ToolStripMenuItem viewSkillInfoToolStripMenuItem;
         private System.Windows.Forms.TextBox initiativeTextBox;
         private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.ContextMenuStrip SQContextMenuStrip;
+        private System.Windows.Forms.ToolStripMenuItem viewSQInfoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem activeSQToolStripMenuItem;
     }
 }
 

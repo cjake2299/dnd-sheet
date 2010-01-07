@@ -21,10 +21,7 @@ namespace Sheet
                 m_equipments.Add(item);
 
 				foreach (EffectSet effectSet in item.Effects)
-				{
-                    effectSet.SetEffectSource("ITEM", itemCode); // 이펙트의 소스를 아이템으로 설정한다.
                     m_effects.Add(effectSet); // 활성화된 이펙트 목록에 이펙트를 추가한다.
-				}
 			}
 		}
 
