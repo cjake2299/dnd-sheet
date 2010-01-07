@@ -11,4 +11,11 @@
     <Will>Poor</Will>
   </Save>
   <SkillPoint>4</SkillPoint>
+  <Feature>
+    <Level code="1">
+      <SpecialQuility code="RAGE">
+        <Count> 1 </Count>
+      </SpecialQuility>
+    </Level>
+  </Feature>
 </Class>
