@@ -57,7 +57,7 @@ namespace Sheet
 			XmlNodeList effectNodes = root.SelectNodes("/Feat/Effects//EffectSet");
 			foreach (XmlNode effectSetNode in effectNodes)
 			{
-				m_effects.Add( new EffectSet(effectSetNode) );
+				m_effects.Add( new EffectSet(effectSetNode, "FEAT", m_code) );
 			}
 			#endregion
         }
