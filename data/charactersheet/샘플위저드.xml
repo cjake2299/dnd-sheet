@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="euc-kr" standalone="yes"?>
+<CharacterSheet>
+  <PlayerName>테스터</PlayerName>
+  <TeamName>
+  </TeamName>
+  <CharacterName>법사1</CharacterName>
+  <Race>HUMAN</Race>
+  <Alignment>LG</Alignment>
+  <Age>
+  </Age>
+  <Height>0</Height>
+  <Weight>0</Weight>
+  <Description>
+  </Description>
+  <Memo>
+  </Memo>
+  <LevelInfo>
+    <Level number="1">
+      <ClassCode>WIZARD</ClassCode>
+      <HP>4</HP>
+    </Level>
+    <Level number="2">
+      <ClassCode>WIZARD</ClassCode>
+      <HP>3</HP>
+    </Level>
+    <Level number="3">
+      <ClassCode>WIZARD</ClassCode>
+      <HP>3</HP>
+    </Level>
+    <Level number="4">
+      <ClassCode>WIZARD</ClassCode>
+      <HP>3</HP>
+    </Level>
+    <Level number="5">
+      <ClassCode>WIZARD</ClassCode>
+      <HP>3</HP>
+    </Level>
+  </LevelInfo>
+  <HP>
+    <CurrentHP>0</CurrentHP>
+  </HP>
+  <Ability>
+    <Strength>8</Strength>
+    <Dexterity>14</Dexterity>
+    <Constitution>12</Constitution>
+    <Intelligence>18</Intelligence>
+    <Wisdom>10</Wisdom>
+    <Charisma>14</Charisma>
+  </Ability>
+  <Feats />
+  <Skills />
+  <Equipments>
+    <Item code="AMULET_OF_HEALTH_E4" />
+    <Item code="GLOVE_OF_DEXTERITY_E4" />
+    <Item code="CLOAK_OF_RESISTANCE_E4" />
+  </Equipments>
+  <Inventory />
+  <Gold>0</Gold>
+</CharacterSheet>

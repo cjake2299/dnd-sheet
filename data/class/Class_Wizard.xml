@@ -11,4 +11,35 @@
     <Will>Good</Will>
   </Save>
   <SkillPoint>2</SkillPoint>
+  <Spell>
+    <CasterLevelRatio>1</CasterLevelRatio>
+    <CastType>WIZARD</CastType>
+    <RelatedAbility>INT</RelatedAbility>
+    <SpellPerDay>
+      <Level number="1">
+        <SpellNumber level="0">3</SpellNumber>
+        <SpellNumber level="1">1</SpellNumber>
+      </Level>
+      <Level number="2">
+        <SpellNumber level="0">4</SpellNumber>
+        <SpellNumber level="1">2</SpellNumber>
+      </Level>
+      <Level number="3">
+        <SpellNumber level="0">4</SpellNumber>
+        <SpellNumber level="1">2</SpellNumber>
+        <SpellNumber level="2">1</SpellNumber>
+      </Level>
+      <Level number="4">
+        <SpellNumber level="0">4</SpellNumber>
+        <SpellNumber level="1">3</SpellNumber>
+        <SpellNumber level="2">2</SpellNumber>
+      </Level>
+      <Level number="5">
+        <SpellNumber level="0">4</SpellNumber>
+        <SpellNumber level="1">3</SpellNumber>
+        <SpellNumber level="2">2</SpellNumber>
+        <SpellNumber level="3">1</SpellNumber>
+      </Level>
+    </SpellPerDay>
+  </Spell>
 </Class>
