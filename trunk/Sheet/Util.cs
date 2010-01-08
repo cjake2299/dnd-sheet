@@ -1,10 +1,55 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using System.Xml;
 
 namespace Sheet
 {
+    /**
+     * ComboBox에서 Display-Value 쌍 구조를 지원하기 위해 사용하는 범용 클래스입니다.
+     * 데이터타입은 string만 지원합니다.
+     */
+    public class ComboBoxItemSet
+    {
+        // 텍스트-값 쌍을 나타내는 내부 클래스.
+        class TextValuePair
+        {
+            string m_text;
+            object m_value;
+
+            public string Text { get { return m_text; } }
+            public object Value { get { return m_value; } }
+
+            public TextValuePair(string text, object value)
+            {
+                m_text = text;
+                m_value = value;
+            }
+
+            public override string ToString()
+            {
+                return m_value.ToString();
+            }
+        }
+
+        ArrayList list = new ArrayList();
+
+        public void Add(string text, object value)
+        {
+            list.Add( new TextValuePair(text, value) );
+        }
+
+        public void Bind(System.Windows.Forms.ComboBox comboBox)
+        {
+            if (list.Count < 1) return; // 값이 없으면 바인딩할 필요가 없다.
+            
+            comboBox.DataSource = list;
+            comboBox.DisplayMember = "Text";
+            comboBox.ValueMember = "Value";          
+        }
+    }
+
 	public static class Util
 	{
 		public static XmlElement LoadXMLFile(string path)
@@ -172,6 +217,11 @@ namespace Sheet
 		{
 			return GetNodeDoubleData(node, true);
 		}
+
+        public static int GetNodeIntAttribute(XmlNode node, string attributeName)
+        {
+            return ParseToInt( GetNodeAttribute(node, attributeName) );
+        }
 
 		public static string GetNodeAttribute(XmlNode node, string attributeName)
 		{

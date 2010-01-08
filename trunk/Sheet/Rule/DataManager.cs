@@ -180,6 +180,15 @@ namespace Sheet
             else
                 return Item.GetUndefinedItem("'" + code + "' : 존재하지 않는 아이템");
         }
+
+        public ClassInfo GetClass(string code)
+        {
+            if( m_classData.ContainsKey(code) )
+                return m_classData[code];
+            else
+                return null; // 에러용 빈 클래스 객체를 생성하는 new 구문으로 바꾸는게 좋을 듯.
+        }
+
 /*
         SpecialQuilityInfo GetSpecialQuility(string code)
         {
