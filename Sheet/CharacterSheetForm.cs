@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -64,7 +65,13 @@ namespace Sheet
             this.initiativeTextBox.Text = string.Format("{0:+0;-0}", characterInfo.GetInitiative());
 
 			// 캐릭터 레벨 정보 출력
-            this.LevelTextBox.Text = characterInfo.GetLevelInfoStr();
+            Dictionary<string, int> levels = characterInfo.GetLevelInfo();
+            List<string> levelInfoStr = new List<string>();
+
+            foreach (KeyValuePair<string, int> level in levels)
+                levelInfoStr.Add(level.Key + " " + level.Value);
+
+            this.LevelTextBox.Text = string.Join(" / ", levelInfoStr.ToArray());
 
             /*
             List<string> levels = characterInfo.GetDetailLevelInfo();
@@ -172,6 +179,21 @@ namespace Sheet
 
             // 활성화된 이펙트 목록 출력
             DisplayEffectList();
+
+            // 주문시전자 클래스 목록 출력
+            //spellCastingClassComboBox.Items.Clear();
+
+            Dictionary<string, int> classes = characterInfo.GetLevelInfo();
+            ComboBoxItemSet items = new ComboBoxItemSet();
+
+            foreach (string classCode in classes.Keys)
+            {
+                ClassInfo casterClass = DataManager.Instance.GetClass(classCode);
+                // 캐스터 클래스라면 테이블에 추가한다.
+                if ( casterClass != null && casterClass.IsCasterClass )
+                    items.Add(casterClass.Name, casterClass.Code);
+            }
+            items.Bind(spellCastingClassComboBox);
 
             // 수정되지 않은 상태로 설정.
             isSheetChanged = false;
@@ -438,5 +460,37 @@ namespace Sheet
             
         }
         #endregion 
+
+        #region 주문 리스트 관련
+        public void DisplaySpellList(string classCode)
+        {
+            ClassInfo casterClass = DataManager.Instance.GetClass(classCode);
+            // 존재하는 클래스인지 체크.
+            if (casterClass == null) return;
+
+            characterInfo.SelectedSpellCastingClass = classCode;
+
+            string spellcastingInfo = "Caster Level " + characterInfo.GetCasterLevel() + "; " +
+                                      "DC " + characterInfo.GetBaseSpellDC() + " + spell level; " +
+                                      "Spells ";
+            
+            for (int i = 0; i < 10; i++)
+            {
+                int count = characterInfo.GetSpellPerDay(i);
+                if (count > 0) spellcastingInfo += count + "/";
+            }
+
+            spellCastingInfoTextBox.Text = spellcastingInfo;
+        }
+
+
+
+        private void spellCastingClassComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (spellCastingClassComboBox.SelectedValue == null) return;
+
+            DisplaySpellList( spellCastingClassComboBox.SelectedValue.ToString() );
+        }
+        #endregion
     }
 }

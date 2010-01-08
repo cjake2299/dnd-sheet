@@ -25,7 +25,7 @@ namespace Sheet
 
     partial class CharacterSheet
     {
-        Dictionary<string, int> GetLevelInfo()
+        public Dictionary<string, int> GetLevelInfo()
         {
             Dictionary<string, int> levels = new Dictionary<string, int>();
 
@@ -44,17 +44,13 @@ namespace Sheet
             return levels;
         }
 
-        public string GetLevelInfoStr()
+        public int GetClassLevel(string classCode)
         {
             Dictionary<string, int> levels = GetLevelInfo();
-            List<string> levelInfoStr = new List<string>();
-
-            foreach (KeyValuePair<string, int> level in levels)
-            {
-                levelInfoStr.Add(level.Key + " " + level.Value);
-            }
-
-            return string.Join(" / ", levelInfoStr.ToArray());
+            if (levels.ContainsKey(classCode))
+                return levels[classCode];
+            else
+                return 0;
         }
 
 		public int GetTotalLevel()

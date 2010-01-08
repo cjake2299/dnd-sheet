@@ -48,6 +48,9 @@ namespace Sheet
         // 소지금
         double m_gold; 
 
+        // 주문리스트
+        Dictionary<string, int[][]> m_spellList = new Dictionary<string, int[][]>();
+
         // 활성화된 이펙트
 		List<EffectSet> m_effects = new List<EffectSet>();
 

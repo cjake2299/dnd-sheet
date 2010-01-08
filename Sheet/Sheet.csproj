@@ -60,6 +60,7 @@
     <Compile Include="Character\Attack.cs" />
     <Compile Include="Character\CharacterSheet.cs" />
     <Compile Include="Character\SpecialQuilities.cs" />
+    <Compile Include="Character\Spells.cs" />
     <Compile Include="Rule\ClassInfo.cs" />
     <Compile Include="Character\Equipment.cs" />
     <Compile Include="Character\Feats.cs" />
