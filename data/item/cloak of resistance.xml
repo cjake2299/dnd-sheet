@@ -17,7 +17,7 @@
     <EffectSet>
       <Effect>
         <Type>ALL_SAVE_BONUS</Type>
-        <ModifierType>ENHANCEMENT</ModifierType>
+        <ModifierType>RESISTANCE</ModifierType>
         <Value>4</Value>
       </Effect>
     </EffectSet>

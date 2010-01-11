@@ -124,6 +124,39 @@
             this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.SpellTabPage = new System.Windows.Forms.TabPage();
+            this.lv0SpellNumberTextBox = new System.Windows.Forms.TextBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.lv0SpellListView = new System.Windows.Forms.ListView();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.lv1SpellNumberTextBox = new System.Windows.Forms.TextBox();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.listView7 = new System.Windows.Forms.ListView();
+            this.listView8 = new System.Windows.Forms.ListView();
+            this.listView9 = new System.Windows.Forms.ListView();
+            this.listView4 = new System.Windows.Forms.ListView();
+            this.listView5 = new System.Windows.Forms.ListView();
+            this.listView6 = new System.Windows.Forms.ListView();
+            this.listView3 = new System.Windows.Forms.ListView();
+            this.listView2 = new System.Windows.Forms.ListView();
+            this.lv1SpellListView = new System.Windows.Forms.ListView();
+            this.spellCastingInfoTextBox = new System.Windows.Forms.TextBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.spellCastingClassComboBox = new System.Windows.Forms.ComboBox();
             this.descriptionTabPage = new System.Windows.Forms.TabPage();
             this.weightTextBox = new System.Windows.Forms.TextBox();
             this.heightTextBox = new System.Windows.Forms.TextBox();
@@ -152,39 +185,6 @@
             this.도움말ToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.openSheetFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveSheetFileDialog = new System.Windows.Forms.SaveFileDialog();
-            this.spellCastingClassComboBox = new System.Windows.Forms.ComboBox();
-            this.label40 = new System.Windows.Forms.Label();
-            this.spellCastingInfoTextBox = new System.Windows.Forms.TextBox();
-            this.spell1LvListView = new System.Windows.Forms.ListView();
-            this.listView2 = new System.Windows.Forms.ListView();
-            this.listView3 = new System.Windows.Forms.ListView();
-            this.listView4 = new System.Windows.Forms.ListView();
-            this.listView5 = new System.Windows.Forms.ListView();
-            this.listView6 = new System.Windows.Forms.ListView();
-            this.listView7 = new System.Windows.Forms.ListView();
-            this.listView8 = new System.Windows.Forms.ListView();
-            this.listView9 = new System.Windows.Forms.ListView();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.label47 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.label48 = new System.Windows.Forms.Label();
-            this.label49 = new System.Windows.Forms.Label();
-            this.label50 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label41 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
             sellButton = new System.Windows.Forms.Button();
             this.sheetTabControl.SuspendLayout();
             this.SheetTabPage.SuspendLayout();
@@ -1120,9 +1120,9 @@
             // 
             // SpellTabPage
             // 
-            this.SpellTabPage.Controls.Add(this.textBox1);
+            this.SpellTabPage.Controls.Add(this.lv0SpellNumberTextBox);
             this.SpellTabPage.Controls.Add(this.label41);
-            this.SpellTabPage.Controls.Add(this.listView1);
+            this.SpellTabPage.Controls.Add(this.lv0SpellListView);
             this.SpellTabPage.Controls.Add(this.textBox8);
             this.SpellTabPage.Controls.Add(this.textBox9);
             this.SpellTabPage.Controls.Add(this.textBox10);
@@ -1137,7 +1137,7 @@
             this.SpellTabPage.Controls.Add(this.label47);
             this.SpellTabPage.Controls.Add(this.textBox4);
             this.SpellTabPage.Controls.Add(this.textBox3);
-            this.SpellTabPage.Controls.Add(this.textBox2);
+            this.SpellTabPage.Controls.Add(this.lv1SpellNumberTextBox);
             this.SpellTabPage.Controls.Add(this.label44);
             this.SpellTabPage.Controls.Add(this.label43);
             this.SpellTabPage.Controls.Add(this.label42);
@@ -1149,7 +1149,7 @@
             this.SpellTabPage.Controls.Add(this.listView6);
             this.SpellTabPage.Controls.Add(this.listView3);
             this.SpellTabPage.Controls.Add(this.listView2);
-            this.SpellTabPage.Controls.Add(this.spell1LvListView);
+            this.SpellTabPage.Controls.Add(this.lv1SpellListView);
             this.SpellTabPage.Controls.Add(this.spellCastingInfoTextBox);
             this.SpellTabPage.Controls.Add(this.label40);
             this.SpellTabPage.Controls.Add(this.spellCastingClassComboBox);
@@ -1160,6 +1160,283 @@
             this.SpellTabPage.TabIndex = 1;
             this.SpellTabPage.Text = "주문";
             this.SpellTabPage.UseVisualStyleBackColor = true;
+            // 
+            // lv0SpellNumberTextBox
+            // 
+            this.lv0SpellNumberTextBox.Location = new System.Drawing.Point(15, 135);
+            this.lv0SpellNumberTextBox.Name = "lv0SpellNumberTextBox";
+            this.lv0SpellNumberTextBox.ReadOnly = true;
+            this.lv0SpellNumberTextBox.Size = new System.Drawing.Size(43, 21);
+            this.lv0SpellNumberTextBox.TabIndex = 33;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(22, 120);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(28, 12);
+            this.label41.TabIndex = 32;
+            this.label41.Text = "0 Lv\r\n";
+            // 
+            // lv0SpellListView
+            // 
+            this.lv0SpellListView.Location = new System.Drawing.Point(80, 111);
+            this.lv0SpellListView.Name = "lv0SpellListView";
+            this.lv0SpellListView.Size = new System.Drawing.Size(321, 45);
+            this.lv0SpellListView.TabIndex = 31;
+            this.lv0SpellListView.UseCompatibleStateImageBehavior = false;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(15, 531);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.ReadOnly = true;
+            this.textBox8.Size = new System.Drawing.Size(43, 21);
+            this.textBox8.TabIndex = 30;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(15, 487);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.ReadOnly = true;
+            this.textBox9.Size = new System.Drawing.Size(43, 21);
+            this.textBox9.TabIndex = 29;
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(15, 443);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.ReadOnly = true;
+            this.textBox10.Size = new System.Drawing.Size(43, 21);
+            this.textBox10.TabIndex = 28;
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(22, 516);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(28, 12);
+            this.label48.TabIndex = 27;
+            this.label48.Text = "9 Lv\r\n";
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(22, 472);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(28, 12);
+            this.label49.TabIndex = 26;
+            this.label49.Text = "8 Lv\r\n";
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(22, 428);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(28, 12);
+            this.label50.TabIndex = 25;
+            this.label50.Text = "7 Lv\r\n";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(15, 399);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.ReadOnly = true;
+            this.textBox5.Size = new System.Drawing.Size(43, 21);
+            this.textBox5.TabIndex = 24;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(15, 355);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.ReadOnly = true;
+            this.textBox6.Size = new System.Drawing.Size(43, 21);
+            this.textBox6.TabIndex = 23;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(15, 311);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.ReadOnly = true;
+            this.textBox7.Size = new System.Drawing.Size(43, 21);
+            this.textBox7.TabIndex = 22;
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(22, 384);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(28, 12);
+            this.label45.TabIndex = 21;
+            this.label45.Text = "6 Lv\r\n";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(22, 340);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(28, 12);
+            this.label46.TabIndex = 20;
+            this.label46.Text = "5 Lv\r\n";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(22, 296);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(28, 12);
+            this.label47.TabIndex = 19;
+            this.label47.Text = "4 Lv\r\n";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(15, 267);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.ReadOnly = true;
+            this.textBox4.Size = new System.Drawing.Size(43, 21);
+            this.textBox4.TabIndex = 18;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(15, 223);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.ReadOnly = true;
+            this.textBox3.Size = new System.Drawing.Size(43, 21);
+            this.textBox3.TabIndex = 17;
+            // 
+            // lv1SpellNumberTextBox
+            // 
+            this.lv1SpellNumberTextBox.Location = new System.Drawing.Point(15, 179);
+            this.lv1SpellNumberTextBox.Name = "lv1SpellNumberTextBox";
+            this.lv1SpellNumberTextBox.ReadOnly = true;
+            this.lv1SpellNumberTextBox.Size = new System.Drawing.Size(43, 21);
+            this.lv1SpellNumberTextBox.TabIndex = 16;
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(22, 252);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(28, 12);
+            this.label44.TabIndex = 15;
+            this.label44.Text = "3 Lv\r\n";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(22, 208);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(28, 12);
+            this.label43.TabIndex = 14;
+            this.label43.Text = "2 Lv\r\n";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(22, 164);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(28, 12);
+            this.label42.TabIndex = 13;
+            this.label42.Text = "1 Lv\r\n";
+            // 
+            // listView7
+            // 
+            this.listView7.Location = new System.Drawing.Point(80, 507);
+            this.listView7.Name = "listView7";
+            this.listView7.Size = new System.Drawing.Size(321, 45);
+            this.listView7.TabIndex = 12;
+            this.listView7.UseCompatibleStateImageBehavior = false;
+            // 
+            // listView8
+            // 
+            this.listView8.Location = new System.Drawing.Point(80, 463);
+            this.listView8.Name = "listView8";
+            this.listView8.Size = new System.Drawing.Size(321, 45);
+            this.listView8.TabIndex = 11;
+            this.listView8.UseCompatibleStateImageBehavior = false;
+            // 
+            // listView9
+            // 
+            this.listView9.Location = new System.Drawing.Point(80, 419);
+            this.listView9.Name = "listView9";
+            this.listView9.Size = new System.Drawing.Size(321, 45);
+            this.listView9.TabIndex = 10;
+            this.listView9.UseCompatibleStateImageBehavior = false;
+            // 
+            // listView4
+            // 
+            this.listView4.Location = new System.Drawing.Point(80, 375);
+            this.listView4.Name = "listView4";
+            this.listView4.Size = new System.Drawing.Size(321, 45);
+            this.listView4.TabIndex = 9;
+            this.listView4.UseCompatibleStateImageBehavior = false;
+            // 
+            // listView5
+            // 
+            this.listView5.Location = new System.Drawing.Point(80, 331);
+            this.listView5.Name = "listView5";
+            this.listView5.Size = new System.Drawing.Size(321, 45);
+            this.listView5.TabIndex = 8;
+            this.listView5.UseCompatibleStateImageBehavior = false;
+            // 
+            // listView6
+            // 
+            this.listView6.Location = new System.Drawing.Point(80, 287);
+            this.listView6.Name = "listView6";
+            this.listView6.Size = new System.Drawing.Size(321, 45);
+            this.listView6.TabIndex = 7;
+            this.listView6.UseCompatibleStateImageBehavior = false;
+            // 
+            // listView3
+            // 
+            this.listView3.Location = new System.Drawing.Point(80, 243);
+            this.listView3.Name = "listView3";
+            this.listView3.Size = new System.Drawing.Size(321, 45);
+            this.listView3.TabIndex = 6;
+            this.listView3.UseCompatibleStateImageBehavior = false;
+            // 
+            // listView2
+            // 
+            this.listView2.Location = new System.Drawing.Point(80, 199);
+            this.listView2.Name = "listView2";
+            this.listView2.Size = new System.Drawing.Size(321, 45);
+            this.listView2.TabIndex = 5;
+            this.listView2.UseCompatibleStateImageBehavior = false;
+            // 
+            // lv1SpellListView
+            // 
+            this.lv1SpellListView.Location = new System.Drawing.Point(80, 155);
+            this.lv1SpellListView.Name = "lv1SpellListView";
+            this.lv1SpellListView.Size = new System.Drawing.Size(321, 45);
+            this.lv1SpellListView.TabIndex = 4;
+            this.lv1SpellListView.UseCompatibleStateImageBehavior = false;
+            // 
+            // spellCastingInfoTextBox
+            // 
+            this.spellCastingInfoTextBox.Location = new System.Drawing.Point(15, 68);
+            this.spellCastingInfoTextBox.Name = "spellCastingInfoTextBox";
+            this.spellCastingInfoTextBox.ReadOnly = true;
+            this.spellCastingInfoTextBox.Size = new System.Drawing.Size(386, 21);
+            this.spellCastingInfoTextBox.TabIndex = 3;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(13, 32);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(38, 12);
+            this.label40.TabIndex = 1;
+            this.label40.Text = "Class";
+            // 
+            // spellCastingClassComboBox
+            // 
+            this.spellCastingClassComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.spellCastingClassComboBox.FormattingEnabled = true;
+            this.spellCastingClassComboBox.Location = new System.Drawing.Point(58, 29);
+            this.spellCastingClassComboBox.Name = "spellCastingClassComboBox";
+            this.spellCastingClassComboBox.Size = new System.Drawing.Size(121, 20);
+            this.spellCastingClassComboBox.TabIndex = 0;
+            this.spellCastingClassComboBox.SelectedIndexChanged += new System.EventHandler(this.spellCastingClassComboBox_SelectedIndexChanged);
             // 
             // descriptionTabPage
             // 
@@ -1425,273 +1702,6 @@
             // 
             this.saveSheetFileDialog.DefaultExt = "xml";
             // 
-            // spellCastingClassComboBox
-            // 
-            this.spellCastingClassComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.spellCastingClassComboBox.FormattingEnabled = true;
-            this.spellCastingClassComboBox.Location = new System.Drawing.Point(58, 29);
-            this.spellCastingClassComboBox.Name = "spellCastingClassComboBox";
-            this.spellCastingClassComboBox.Size = new System.Drawing.Size(121, 20);
-            this.spellCastingClassComboBox.TabIndex = 0;
-            this.spellCastingClassComboBox.SelectedIndexChanged += new System.EventHandler(this.spellCastingClassComboBox_SelectedIndexChanged);
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(13, 32);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(38, 12);
-            this.label40.TabIndex = 1;
-            this.label40.Text = "Class";
-            // 
-            // spellCastingInfoTextBox
-            // 
-            this.spellCastingInfoTextBox.Location = new System.Drawing.Point(15, 68);
-            this.spellCastingInfoTextBox.Name = "spellCastingInfoTextBox";
-            this.spellCastingInfoTextBox.ReadOnly = true;
-            this.spellCastingInfoTextBox.Size = new System.Drawing.Size(386, 21);
-            this.spellCastingInfoTextBox.TabIndex = 3;
-            // 
-            // spell1LvListView
-            // 
-            this.spell1LvListView.Location = new System.Drawing.Point(80, 155);
-            this.spell1LvListView.Name = "spell1LvListView";
-            this.spell1LvListView.Size = new System.Drawing.Size(321, 45);
-            this.spell1LvListView.TabIndex = 4;
-            this.spell1LvListView.UseCompatibleStateImageBehavior = false;
-            // 
-            // listView2
-            // 
-            this.listView2.Location = new System.Drawing.Point(80, 199);
-            this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(321, 45);
-            this.listView2.TabIndex = 5;
-            this.listView2.UseCompatibleStateImageBehavior = false;
-            // 
-            // listView3
-            // 
-            this.listView3.Location = new System.Drawing.Point(80, 243);
-            this.listView3.Name = "listView3";
-            this.listView3.Size = new System.Drawing.Size(321, 45);
-            this.listView3.TabIndex = 6;
-            this.listView3.UseCompatibleStateImageBehavior = false;
-            // 
-            // listView4
-            // 
-            this.listView4.Location = new System.Drawing.Point(80, 375);
-            this.listView4.Name = "listView4";
-            this.listView4.Size = new System.Drawing.Size(321, 45);
-            this.listView4.TabIndex = 9;
-            this.listView4.UseCompatibleStateImageBehavior = false;
-            // 
-            // listView5
-            // 
-            this.listView5.Location = new System.Drawing.Point(80, 331);
-            this.listView5.Name = "listView5";
-            this.listView5.Size = new System.Drawing.Size(321, 45);
-            this.listView5.TabIndex = 8;
-            this.listView5.UseCompatibleStateImageBehavior = false;
-            // 
-            // listView6
-            // 
-            this.listView6.Location = new System.Drawing.Point(80, 287);
-            this.listView6.Name = "listView6";
-            this.listView6.Size = new System.Drawing.Size(321, 45);
-            this.listView6.TabIndex = 7;
-            this.listView6.UseCompatibleStateImageBehavior = false;
-            // 
-            // listView7
-            // 
-            this.listView7.Location = new System.Drawing.Point(80, 507);
-            this.listView7.Name = "listView7";
-            this.listView7.Size = new System.Drawing.Size(321, 45);
-            this.listView7.TabIndex = 12;
-            this.listView7.UseCompatibleStateImageBehavior = false;
-            // 
-            // listView8
-            // 
-            this.listView8.Location = new System.Drawing.Point(80, 463);
-            this.listView8.Name = "listView8";
-            this.listView8.Size = new System.Drawing.Size(321, 45);
-            this.listView8.TabIndex = 11;
-            this.listView8.UseCompatibleStateImageBehavior = false;
-            // 
-            // listView9
-            // 
-            this.listView9.Location = new System.Drawing.Point(80, 419);
-            this.listView9.Name = "listView9";
-            this.listView9.Size = new System.Drawing.Size(321, 45);
-            this.listView9.TabIndex = 10;
-            this.listView9.UseCompatibleStateImageBehavior = false;
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(22, 164);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(28, 12);
-            this.label42.TabIndex = 13;
-            this.label42.Text = "1 Lv\r\n";
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(22, 208);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(28, 12);
-            this.label43.TabIndex = 14;
-            this.label43.Text = "2 Lv\r\n";
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(22, 252);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(28, 12);
-            this.label44.TabIndex = 15;
-            this.label44.Text = "3 Lv\r\n";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(15, 179);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(43, 21);
-            this.textBox2.TabIndex = 16;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(15, 223);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(43, 21);
-            this.textBox3.TabIndex = 17;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(15, 267);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(43, 21);
-            this.textBox4.TabIndex = 18;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(15, 399);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(43, 21);
-            this.textBox5.TabIndex = 24;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(15, 355);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(43, 21);
-            this.textBox6.TabIndex = 23;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(15, 311);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(43, 21);
-            this.textBox7.TabIndex = 22;
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(22, 384);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(28, 12);
-            this.label45.TabIndex = 21;
-            this.label45.Text = "6 Lv\r\n";
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(22, 340);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(28, 12);
-            this.label46.TabIndex = 20;
-            this.label46.Text = "5 Lv\r\n";
-            // 
-            // label47
-            // 
-            this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(22, 296);
-            this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(28, 12);
-            this.label47.TabIndex = 19;
-            this.label47.Text = "4 Lv\r\n";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(15, 531);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(43, 21);
-            this.textBox8.TabIndex = 30;
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(15, 487);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(43, 21);
-            this.textBox9.TabIndex = 29;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(15, 443);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(43, 21);
-            this.textBox10.TabIndex = 28;
-            // 
-            // label48
-            // 
-            this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(22, 516);
-            this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(28, 12);
-            this.label48.TabIndex = 27;
-            this.label48.Text = "9 Lv\r\n";
-            // 
-            // label49
-            // 
-            this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(22, 472);
-            this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(28, 12);
-            this.label49.TabIndex = 26;
-            this.label49.Text = "8 Lv\r\n";
-            // 
-            // label50
-            // 
-            this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(22, 428);
-            this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(28, 12);
-            this.label50.TabIndex = 25;
-            this.label50.Text = "7 Lv\r\n";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(15, 135);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(43, 21);
-            this.textBox1.TabIndex = 33;
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(22, 120);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(28, 12);
-            this.label41.TabIndex = 32;
-            this.label41.Text = "0 Lv\r\n";
-            // 
-            // listView1
-            // 
-            this.listView1.Location = new System.Drawing.Point(80, 111);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(321, 45);
-            this.listView1.TabIndex = 31;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
             // CharacterSheetForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -1853,7 +1863,7 @@
         private System.Windows.Forms.ListView listView6;
         private System.Windows.Forms.ListView listView3;
         private System.Windows.Forms.ListView listView2;
-        private System.Windows.Forms.ListView spell1LvListView;
+        private System.Windows.Forms.ListView lv1SpellListView;
         private System.Windows.Forms.TextBox spellCastingInfoTextBox;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.ComboBox spellCastingClassComboBox;
@@ -1871,13 +1881,13 @@
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox lv1SpellNumberTextBox;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox lv0SpellNumberTextBox;
         private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lv0SpellListView;
     }
 }
 
