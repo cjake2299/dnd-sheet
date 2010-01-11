@@ -56,4 +56,16 @@
   </Equipments>
   <Inventory />
   <Gold>0</Gold>
+  <Spells>
+    <Level number="0">
+      <Spell code="RESISTANCE">
+        <Using>FALSE</Using>
+      </Spell>
+    </Level>
+    <Level number="1">
+      <Spell code="MAGE_ARMOR">
+        <Using>FALSE</Using>
+      </Spell>
+    </Level>
+  </Spells>
 </CharacterSheet>
