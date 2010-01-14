@@ -2,45 +2,7 @@
   <Name>
     <Korean> 메이지아머 </Korean>
   </Name>
-  <School> </School>
-  <SubSchool> </SubSchool>
-  <Descriptor>
-
-  </Descriptor>
-  <Levels>
-    <Level class="WIZARD">0</Level>
-    <Level class="CLERIC">0</Level>
-    <Level class="DRUID">0</Level>
-    <Level class="BARD">0</Level>
-    <Level class="PALADAN">0</Level>
-  </Levels>
-  <Components>
-    <Component>V</Component>
-    <Component>S</Component>
-    <Component>M/DF</Component>
-  </Components>
-  <CastingTime>
-    <Type>STANDARD</Type>
-    <Value>1</Value>
-  </CastingTime>
-  <Range>
-    <Type>TOUCH</Type>
-    <Value></Value>
-  </Range>
-  <Aiming type="TARGET">
-    <Value>TOUCHED</Value>
-  </Aiming>
-  <Duration>
-    <Type>MINTUE</Type>
-    <Value>1</Value>
-  </Duration>
-  <Saving>
-    <RelatedSave>WILL</RelatedSave>
-    <Type>NEGATES</Type>
-    <TypeOption>HARMLESS</TypeOption>
-    <Modifier></Modifier>
-  </Saving>
-  <SpellResistance>YES</SpellResistance>
+  <School>ABJURATION</School>
   <Description>
     <Korean>
       You imbue the subject with magical energy that protects it from harm, granting it a +1 resistance bonus on saves.
@@ -54,9 +16,9 @@
   <Effects>
     <EffectSet>
       <Effect>
-        <Type>ALL_SAVE_BONUS</Type>
-        <ModifierType>RESISTANCE</ModifierType>
-        <Value>1</Value>
+        <Type>AC_BONUS</Type>
+        <ModifierType>ARMOR_BASE</ModifierType>
+        <Value>4</Value>
       </Effect>
     </EffectSet>
   </Effects>

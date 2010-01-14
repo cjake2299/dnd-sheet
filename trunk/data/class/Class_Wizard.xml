@@ -11,7 +11,7 @@
     <Will>Good</Will>
   </Save>
   <SkillPoint>2</SkillPoint>
-  <Spell>
+  <SpellInfo>
     <CasterLevelRatio>1</CasterLevelRatio>
     <CastType>WIZARD</CastType>
     <RelatedAbility>INT</RelatedAbility>
@@ -41,5 +41,13 @@
         <SpellNumber level="3">1</SpellNumber>
       </Level>
     </SpellPerDay>
-  </Spell>
+    <SpellList>
+      <SpellLevel number="0">
+        <Spell>RESISTANCE</Spell>
+      </SpellLevel>
+      <SpellLevel number="1">
+        <Spell>MAGE_ARMOR</Spell>
+      </SpellLevel>
+    </SpellList>
+  </SpellInfo>
 </Class>
