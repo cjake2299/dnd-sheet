@@ -189,6 +189,13 @@ namespace Sheet
                 return null; // 에러용 빈 클래스 객체를 생성하는 new 구문으로 바꾸는게 좋을 듯.
         }
 
+        public SpellInfo GetSpell(string code)
+        {
+            if (m_spellData.ContainsKey(code))
+                return m_spellData[code];
+            else
+                return null;
+        }
 /*
         SpecialQuilityInfo GetSpecialQuility(string code)
         {

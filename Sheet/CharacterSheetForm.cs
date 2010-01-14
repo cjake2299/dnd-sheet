@@ -34,7 +34,8 @@ namespace Sheet
 
         public void DisplayCharacterInfo()
         {
-			// 이름 출력
+            #region 기본정보 출력
+            // 이름 출력
 			this.nameTextBox.Text = characterInfo.ChatacterName;
 			// 플레이어 이름 출력
 			this.playerTextBox.Text = characterInfo.PlayerName;
@@ -73,14 +74,6 @@ namespace Sheet
 
             this.LevelTextBox.Text = string.Join(" / ", levelInfoStr.ToArray());
 
-            /*
-            List<string> levels = characterInfo.GetDetailLevelInfo();
-            foreach (string str in levels)
-            {
-                this.LevelDetailInfoListView.Items.Add(str);
-            }
-            */
-
 			// HP 정보 출력
 			this.CurrentHPTextBox.Text = characterInfo.CurrentHP.ToString();
 			this.MaxHPTextBox.Text = characterInfo.GetMaxHP().ToString();
@@ -92,17 +85,19 @@ namespace Sheet
             this.fortTextBox.Text = string.Format("{0:+0;-0}", characterInfo.GetFort());
             this.refTextBox.Text = string.Format("{0:+0;-0}", characterInfo.GetRef());
             this.willTextBox.Text = string.Format("{0:+0;-0}", characterInfo.GetWill());
+            #endregion
 
-
-			// 능력치 정보 출력
+            #region 능력치 정보 출력
             this.StrTextBox.Text = characterInfo.GetStr().ToString(); this.baseStrTextBox.Text = characterInfo.BaseStr.ToString();
             this.DexTextBox.Text = characterInfo.GetDex().ToString(); this.baseDexTextBox.Text = characterInfo.BaseDex.ToString();
             this.ConTextBox.Text = characterInfo.GetCon().ToString(); this.baseConTextBox.Text = characterInfo.BaseCon.ToString();
             this.IntTextBox.Text = characterInfo.GetInt().ToString(); this.baseIntTextBox.Text = characterInfo.BaseInt.ToString();
             this.WisTextBox.Text = characterInfo.GetWis().ToString(); this.baseWisTextBox.Text = characterInfo.BaseWis.ToString();
             this.ChaTextBox.Text = characterInfo.GetCha().ToString(); this.baseChaTextBox.Text = characterInfo.BaseCha.ToString();
+            #endregion
 
-			// 기본명중굴림 정보 출력
+            #region 공격정보 출력
+            // 기본명중굴림 정보 출력
 			this.BABTextBox.Text = "+" + characterInfo.GetBAB().ToString();
 
 			// 그래플 수정치 정보 출력
@@ -111,9 +106,10 @@ namespace Sheet
 			// 공격 정보 출력
 			this.AtkTextBox.Text = characterInfo.GetAttackDescription();
 			this.FullAtkTextBox.Text = characterInfo.GetFullAttackDescription();
+            #endregion
 
-            // 피트 정보 출력
-			featListView.Items.Clear();
+            #region 피트 정보 출력
+            featListView.Items.Clear();
             foreach (string featCode in characterInfo.Feats)
             {
 				ListViewItem feat = new ListViewItem();
@@ -121,8 +117,9 @@ namespace Sheet
 				feat.Text = DataManager.Instance.FeatData[featCode].Name;
 				featListView.Items.Add(feat);
             }
+            #endregion
 
-            // 특수능력 정보 출력
+            #region 특수능력 정보 출력
             SQListView.Items.Clear();
             foreach (SpecialQuilityInfo SQ in characterInfo.SpecialQuilities)
             {
@@ -132,8 +129,9 @@ namespace Sheet
                 SQItem.Text = SQ.Name;
                 SQListView.Items.Add(SQItem);
             }
+            #endregion
 
-            // 스킬정보 출력
+            #region 스킬정보 출력
             skillListView.Items.Clear();
             string name;
             int bonus;
@@ -150,8 +148,9 @@ namespace Sheet
 
 				skillListView.Items.Add(skillItem);
             }
+            #endregion
 
-            // 장비 목록 출력
+            #region 장비 목록 출력
             equipListView.Items.Clear();
             foreach (Item equip in characterInfo.Equipments)
             {
@@ -160,8 +159,9 @@ namespace Sheet
                 item.Text = equip.Name + "(" + equip.PartStr + ")";
                 equipListView.Items.Add(item);
             }
+            #endregion
 
-            // 인벤토리 출력
+            #region 인벤토리 출력
             inventoryListView.Items.Clear();
             foreach (Item item in characterInfo.Inventroy)
             {
@@ -170,19 +170,19 @@ namespace Sheet
                 buf.Text = item.Name;
                 inventoryListView.Items.Add(buf);
             }
-
+            
             // 하중 출력
             this.loadLabel.Text = "하중 : " + characterInfo.GetLoad() + " / " + 0.0 + " (lbs)";
 
             // 소지금 출력
             this.goldTextBox.Text = characterInfo.Gold.ToString();
+            #endregion
 
             // 활성화된 이펙트 목록 출력
             DisplayEffectList();
 
-            // 주문시전자 클래스 목록 출력
-            //spellCastingClassComboBox.Items.Clear();
-
+            #region 주문 출력
+            // 주문시전 클래스 콤보박스를 업데이트하면 이벤트에 의해 자동적으로 주문정보 출력이 실행된다.
             Dictionary<string, int> classes = characterInfo.GetLevelInfo();
             ComboBoxItemSet items = new ComboBoxItemSet();
 
@@ -194,6 +194,7 @@ namespace Sheet
                     items.Add(casterClass.Name, casterClass.Code);
             }
             items.Bind(spellCastingClassComboBox);
+            #endregion
 
             // 수정되지 않은 상태로 설정.
             isSheetChanged = false;
@@ -462,34 +463,113 @@ namespace Sheet
         #endregion 
 
         #region 주문 리스트 관련
-        public void DisplaySpellList(string classCode)
+        public void DisplaySpellInfo(string classCode)
         {
             ClassInfo casterClass = DataManager.Instance.GetClass(classCode);
             // 존재하는 클래스인지 체크.
             if (casterClass == null) return;
 
-            characterInfo.SelectedSpellCastingClass = classCode;
-
-            string spellcastingInfo = "Caster Level " + characterInfo.GetCasterLevel() + "; " +
-                                      "DC " + characterInfo.GetBaseSpellDC() + " + spell level; " +
+            #region 주문 기본정보 출력
+            string spellcastingInfo = "Caster Level " + characterInfo.GetCasterLevel(classCode) + "; " +
+                                      "DC " + characterInfo.GetBaseSpellDC(classCode) + " + spell level; " +
                                       "Spells ";
             
             for (int i = 0; i < 10; i++)
             {
-                int count = characterInfo.GetSpellPerDay(i);
+                int count = characterInfo.GetSpellPerDay(classCode, i);
                 if (count > 0) spellcastingInfo += count + "/";
             }
 
             spellCastingInfoTextBox.Text = spellcastingInfo;
+            #endregion
+
+            
+            #region 준비된 주문목록 출력
+            DisplaySpellList(classCode);
+            #endregion
         }
 
+        private void DisplaySpellList(string classCode)
+        {
+            spellDataGridView.Rows.Clear();
+            spellDataGridView.Columns.Clear();
+            DataGridViewTextBoxColumn col = new DataGridViewTextBoxColumn();
+            col.HeaderText = "Lv";
+            col.Name = "LvColumn";
+            spellDataGridView.Columns.Add(col);
 
+            for (int spellLevel = 0; spellLevel < 10; spellLevel++)
+            {
+                List<SpellState> spellList = characterInfo.GetPreparedSpellList(classCode, spellLevel);
+                if (spellList == null) continue;
+
+                ArrayList spells = new ArrayList();
+                spells.Add(spellLevel);
+                for (int i = 0; i < spellList.Count; i++)
+                {
+                    SpellInfo spellInfo = DataManager.Instance.GetSpell(spellList[i].code);
+                    if (spellInfo != null)
+                    {
+                        AddSpellListViewHeader(i);
+                        spells.Add(spellInfo);
+                    }
+                }
+                spellDataGridView.Rows.Add(spells.ToArray());
+            }
+            
+            spellDataGridView.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.DisplayedCells);
+        }
+
+        private void AddSpellListViewHeader(int number)
+        {
+            if (spellDataGridView.Columns.Count < number + 2)
+            {
+                DataGridViewTextBoxColumn colHeader = new System.Windows.Forms.DataGridViewTextBoxColumn();
+                colHeader.HeaderText = (number + 1).ToString();
+                colHeader.Name = (number + 1).ToString();
+                spellDataGridView.Columns.Add(colHeader);
+            }
+        }
 
         private void spellCastingClassComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (spellCastingClassComboBox.SelectedValue == null) return;
 
-            DisplaySpellList( spellCastingClassComboBox.SelectedValue.ToString() );
+            DisplaySpellInfo( spellCastingClassComboBox.SelectedValue.ToString() );
+        }
+
+        private void spellDataGridView_Click(object sender, EventArgs e)
+        {
+            if (spellDataGridView.SelectedCells.Count < 1)
+                return;
+
+            if (spellDataGridView.SelectedCells[0].ColumnIndex == 0)
+                spellContextMenuStrip.Enabled = false;
+            else
+                spellContextMenuStrip.Enabled = true;
+
+            //주문사용ToolStripMenuItem.Enabled = !((SpellState)spellListView.SelectedItems[0].Tag).isUsing;
+        }
+
+        private void 주문사용ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (spellDataGridView.SelectedCells.Count < 1)
+                return;
+
+            characterInfo.ActiveSpell(((SpellInfo)spellDataGridView.SelectedCells[0].Value).Code);
+            //SpellState spellState = (SpellState)spellListView.SelectedItems[0].Tag;
+            //spellState.isUsing = true; // 이 값은 시트 데이터의 주문리스트에 레퍼런스로 연결되어 있으므로, 수정하면 시트 데이터 자체가 바뀜.
+                                       // 좋은 구조라고 볼 수 없으므로, 추후 버전업하면서 수정해야 할 듯.
+            DisplayCharacterInfo();
+        }
+
+        private void 주문정보보기ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (spellDataGridView.SelectedCells.Count < 1)
+                return;
+
+            SpellListForm dlg = new SpellListForm(((SpellInfo)spellDataGridView.SelectedCells[0].Value).Code, characterInfo);
+            dlg.Show();
         }
         #endregion
     }

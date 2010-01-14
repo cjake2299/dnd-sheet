@@ -130,6 +130,12 @@
     <Compile Include="SpecialQuilityListForm.Designer.cs">
       <DependentUpon>SpecialQuilityListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SpellListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpellListForm.Designer.cs">
+      <DependentUpon>SpellListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Util.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -193,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SpecialQuilityListForm.resx">
       <DependentUpon>SpecialQuilityListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpellListForm.resx">
+      <DependentUpon>SpellListForm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

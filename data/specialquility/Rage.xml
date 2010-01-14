@@ -1,0 +1,32 @@
+<SpecialQuility code="RAGE">
+  <Name>
+    <Korean> 격노 </Korean>
+  </Name>
+  <Description>
+    <Korean>
+      격노
+    </Korean>
+  </Description>
+  <Type>ACTIVE</Type>
+  <Effects>
+    <EffectSet>
+      <Type>ACTIVE</Type>
+      <AbilityType>EXTRAORDINARY</AbilityType>
+      <Effect>
+        <Type>STR_BONUS</Type>
+        <ModifierType>MORALE</ModifierType>
+        <Value>4</Value>
+      </Effect>
+      <Effect>
+        <Type>CON_BONUS</Type>
+        <ModifierType>MORALE</ModifierType>
+        <Value>4</Value>
+      </Effect>
+      <Effect>
+        <Type>SAVE_WILL_BONUS</Type>
+        <ModifierType>MORALE</ModifierType>
+        <Value>2</Value>
+      </Effect>      
+    </EffectSet>
+  </Effects>
+</SpecialQuility>

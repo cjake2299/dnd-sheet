@@ -98,6 +98,7 @@ namespace Sheet
                 case "ITEM": name = DataManager.Instance.GetItem(m_sourceName).Name; break;
                 case "SPECIALQUILITY": name = DataManager.Instance.SpecialQuilityData[m_sourceName].Name; break;
                 case "FEAT": name = DataManager.Instance.FeatData[m_sourceName].Name; break;
+                case "SPELL": name = DataManager.Instance.SpellData[m_sourceName].Name; break;
                 default: name = "Unknown"; break;
             }
 

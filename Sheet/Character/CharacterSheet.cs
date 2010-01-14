@@ -49,7 +49,8 @@ namespace Sheet
         double m_gold; 
 
         // 주문리스트
-        Dictionary<string, int[][]> m_spellList = new Dictionary<string, int[][]>();
+        Dictionary<string, Dictionary<int, List<SpellState>>> m_spellList =
+            new Dictionary<string, Dictionary<int, List<SpellState>>>();
 
         // 활성화된 이펙트
 		List<EffectSet> m_effects = new List<EffectSet>();
@@ -183,6 +184,7 @@ namespace Sheet
 			m_equipments.Clear();
 			m_inventroy.Clear();
 			m_effects.Clear();
+            m_spellList.Clear();
 
 			m_gold = 0.0;
         }
@@ -482,6 +484,9 @@ namespace Sheet
 
             // 스킬 정보 읽기
             LoadSkillInfo(root);
+
+            // 준비된 주문 목록 읽기
+            LoadPreparedSpells(root);
 
 			#region 아이템 정보 읽기
 			LoadEquipments(root);
