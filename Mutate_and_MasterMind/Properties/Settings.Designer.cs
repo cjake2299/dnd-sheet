@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Sheet.Properties {
+namespace Mutate_and_MasterMind.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
